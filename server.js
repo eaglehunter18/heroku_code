@@ -5,14 +5,13 @@ var app=express();
 
 var port = process.env.PORT || 8080;
 //connect to our MongoDB server
-var util = require('util')
-var url = require('url')
-var mongojs = require ('mongodb').MongoClient
-var dbConnUrl = process.env.MONGOLAB_URI ||
-  'mongodb://<dbuser>:<dbpassword>@ds151018.mlab.com:51018/contactlist'
+var util = require('util');
+var url = require('url');
+var mongojs = require ('mongodb').MongoClient;
+var dbConnUrl ='mongodb://<dbuser>:<dbpassword>@ds151018.mlab.com:51018/contactlist';
 
 
-console.log('db server: ', dbConnUrl)
+console.log('db server: ', dbConnUrl);
 
 mongojs.connect(dbConnUrl, {}, function(error, db) {
 	console.log('error: ', error)
@@ -21,7 +20,7 @@ mongojs.connect(dbConnUrl, {}, function(error, db) {
 		console.log('collections: ', collections)
     db.close()
 	})
-})
+});
 
 
 // var db=mongojs('contactlist',['contactlist'])

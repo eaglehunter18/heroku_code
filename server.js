@@ -5,25 +5,8 @@ var app=express();
 
 var port = process.env.PORT || 8080;
 //connect to our MongoDB server
-var util = require('util');
-var url = require('url');
-var mongojs = require ('mongodb').MongoClient;
-var dbConnUrl ='mongodb://<dbuser>:<dbpassword>@ds151018.mlab.com:51018/contactlist';
-
-
-console.log('db server: ', dbConnUrl);
-
-mongojs.connect(dbConnUrl, {}, function(error, db) {
-	console.log('error: ', error)
-	db.listCollections().toArray(function(err, collections) {
-    console.log('error: ', error)
-		console.log('collections: ', collections)
-    db.close()
-	})
-});
-
-
-// var db=mongojs('contactlist',['contactlist'])
+var mongojs=require('mongojs');
+var db=mongojs('contactlist',['contactlist'])
 //body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body
 var  bodyParser=require('body-parser');
 app.use(bodyParser.json());

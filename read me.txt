@@ -1,0 +1,14 @@
+Hello
+
+this is facebook-list-user app hosted on a Node JS and Express server and using Angular Js.
+you must be connected to internet to use this project because we load framworks from network during running.
+
+main files in our project
+
+server.js                                                      (Express server)
+contrller.js in controller directroy     (Angular JS module)
+index.html  'home page'                       ( users list page)
+login.html  'facebook SDK api javascript task'
+dirPagination.js library for angular JS in javascript public/javascript directory to implement pagentation
+data directory to save our work (mongojs database directrory)
+.git directory 

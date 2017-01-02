@@ -1,9 +1,13 @@
 {
-  "name": "tutorial",
+  "name": "Mohammad Mafarjeh",
   "version": "1.0.0",
-  "description": "",
+  "description": "first project on heroku",
   "scripts": {
     "start": "node server.js"
+  },
+"engines": {
+    "node": "6.9.2",
+    "npm": "3.10.9"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

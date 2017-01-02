@@ -16,7 +16,7 @@ mongoose.connect(connection.connectionString);
 
 app.get('/', function(req, res) {
 	res.render('index');
-})
+});
 
 app.get('/contactlist',function(req,res){
 console.log('I received a GET request for users')
@@ -34,6 +34,7 @@ var info = new  Info (
 info.save(function(err){
     if (err) return console.error(err);
         res.json(info);
+});
 });//end of post
 
 app.delete('/contactlist/:id', function (req, res) {
@@ -72,4 +73,4 @@ app.put('/contactlist/:id', function (req, res) {
  var port=process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log("server running on port " + port);
-})
+});

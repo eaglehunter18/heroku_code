@@ -9,7 +9,7 @@ var util = require('util')
 var url = require('url')
 var mongojs = require ('mongodb').MongoClient
 var dbConnUrl = process.env.MONGOLAB_URI ||
-  'mongodb://127.0.0.1:27017/test'
+  'mongodb://<dbuser>:<dbpassword>@ds151018.mlab.com:51018/contactlist'
 
 
 console.log('db server: ', dbConnUrl)

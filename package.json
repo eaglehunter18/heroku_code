@@ -10,6 +10,8 @@
     "express": "^4.13.3",
     "mongo": "^0.1.0",
     "mongodb": "^2.2.16",
+    "mongoose": "^4.7.5",
+    "serve-favicon": "^2.3.2",
     "url": "^0.11.0",
     "util": "^0.10.3"
   },
